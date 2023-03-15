@@ -819,7 +819,7 @@ int main(int argc, char ** argv) {
     {
         const int64_t t_start_us = ggml_time_us();
 
-        if (!llama_model_load(params.model, model, vocab, parmas.n_predict)) {  // TODO: set context from user input ??
+        if (!llama_model_load(params.model, model, vocab, params.n_predict)) {  // TODO: set context from user input ??
             fprintf(stderr, "%s: failed to load model from '%s'\n", __func__, params.model.c_str());
             return 1;
         }
